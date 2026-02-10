@@ -1,0 +1,63 @@
+{
+  "name": "Council of Degenerates — Rainbow",
+  "is_dark": true,
+  "colors": {
+    "accent-color": "#00ff88",
+    "accent-color-alt": "#ff3df2",
+
+    "primary-color": "#00c8ff",
+    "secondary-color": "#8b5cff",
+
+    "warning-color": "#ffb300",
+    "error-color": "#ff3355",
+
+    "sidebar-color": "#0b0e16",
+    "sidebar-text-color": "#eaf0ff",
+    "sidebar-selected-color": "#11172a",
+    "sidebar-selected-text-color": "#ffffff",
+
+    "roomlist-background-color": "#0b0e16",
+    "roomlist-text-color": "#eaf0ff",
+    "roomlist-text-secondary-color": "rgba(234,240,255,0.65)",
+
+    "timeline-background-color": "#0e1220",
+    "timeline-text-color": "#eaf0ff",
+    "timeline-text-secondary-color": "rgba(234,240,255,0.7)",
+
+    "dialog-background-color": "#121733",
+    "dialog-text-color": "#ffffff",
+
+    "composer-background-color": "#0f142a",
+    "composer-text-color": "#ffffff",
+    "composer-placeholder-color": "rgba(255,255,255,0.5)",
+
+    "button-background-color": "#121a3d",
+    "button-text-color": "#ffffff",
+
+    "button-disabled-background-color": "#2a2f45",
+    "button-disabled-text-color": "rgba(255,255,255,0.4)",
+
+    "input-background-color": "#0f142a",
+    "input-border-color": "rgba(255,255,255,0.12)",
+    "input-text-color": "#ffffff",
+
+    "avatar-background-color": "#8b5cff",
+
+    "highlight-color": "#00ff88",
+    "selection-color": "rgba(0,255,136,0.25)",
+
+    "link-color": "#67d7ff",
+    "link-hover-color": "#ff3df2",
+
+    "notification-badge-color": "#ff3d7f",
+    "notification-badge-text-color": "#ffffff",
+
+    "tooltip-background-color": "#121733",
+    "tooltip-text-color": "#ffffff",
+
+    "progress-bar-color": "#00ff88",
+
+    "reaction-selected-color": "rgba(255,61,242,0.35)",
+    "reaction-hover-color": "rgba(0,200,255,0.25)"
+  }
+}
