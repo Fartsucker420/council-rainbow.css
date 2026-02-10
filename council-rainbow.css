@@ -1,0 +1,213 @@
+/* Council of Degenerates — RGB Rainbow Theme for Element/SchildiChat
+   Save as: council-rainbow.css
+*/
+
+:root {
+  /* Core colors */
+  --council-bg: #07080c;
+  --council-panel: #0c0f18;
+  --council-panel-2: #0f1424;
+  --council-text: #eaf0ff;
+  --council-muted: rgba(234, 240, 255, 0.70);
+
+  /* RGB accents */
+  --council-r1: #ff3d7f; /* pink */
+  --council-r2: #ffb300; /* amber */
+  --council-r3: #7CFF6B; /* green */
+  --council-r4: #42c5ff; /* cyan */
+  --council-r5: #8b5cff; /* purple */
+
+  /* Gradients */
+  --council-rainbow: linear-gradient(90deg,
+    var(--council-r1),
+    var(--council-r2),
+    var(--council-r3),
+    var(--council-r4),
+    var(--council-r5),
+    var(--council-r1)
+  );
+
+  --council-rainbow-soft: linear-gradient(90deg,
+    rgba(255, 61, 127, 0.35),
+    rgba(255, 179, 0, 0.35),
+    rgba(124, 255, 107, 0.35),
+    rgba(66, 197, 255, 0.35),
+    rgba(139, 92, 255, 0.35)
+  );
+}
+
+/* -------- Base -------- */
+body,
+.mx_MatrixChat,
+.mx_AppContainer {
+  background: radial-gradient(1200px 800px at 25% 10%, rgba(139, 92, 255, 0.14), transparent 60%),
+              radial-gradient(900px 700px at 80% 30%, rgba(66, 197, 255, 0.12), transparent 55%),
+              radial-gradient(1000px 700px at 35% 80%, rgba(255, 61, 127, 0.10), transparent 60%),
+              var(--council-bg) !important;
+  color: var(--council-text) !important;
+}
+
+/* Panels */
+.mx_LeftPanel,
+.mx_RoomView,
+.mx_RightPanel,
+.mx_RoomHeader,
+.mx_AutoHideScrollbar,
+.mx_SpacePanel {
+  background-color: var(--council-panel) !important;
+  color: var(--council-text) !important;
+}
+
+/* Slightly different background for content areas */
+.mx_RoomView .mx_MainSplit {
+  background-color: var(--council-panel-2) !important;
+}
+
+/* Text / muted */
+.mx_EventTile_body,
+.mx_RoomHeader_name,
+.mx_RoomHeader_topic,
+.mx_UserMenu_name,
+.mx_RoomName,
+.mx_RoomTile_name,
+.mx_BaseAvatar_initial {
+  color: var(--council-text) !important;
+}
+
+.mx_RoomHeader_topic,
+.mx_RoomHeader_subtitle,
+.mx_EventTile_senderDetails,
+.mx_TextualEvent,
+.mx_Timestamp {
+  color: var(--council-muted) !important;
+}
+
+/* -------- Rainbow dividers / highlights -------- */
+
+/* Top header rainbow line */
+.mx_RoomHeader {
+  position: relative !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+.mx_RoomHeader::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 2px !important;
+  background: var(--council-rainbow) !important;
+  opacity: 0.95 !important;
+}
+
+/* Selected room gets rainbow rail */
+.mx_RoomTile_selected,
+.mx_RoomTile_selected:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-left: 4px solid transparent !important;
+  border-image: var(--council-rainbow) 1 !important;
+}
+
+/* Hover room subtle rainbow glow */
+.mx_RoomTile:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Space panel highlight */
+.mx_SpacePanel .mx_SpaceButton.mx_SpaceButton_active {
+  outline: 2px solid transparent !important;
+  border-radius: 12px !important;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.06), 0 0 16px rgba(66,197,255,0.18) !important;
+}
+
+/* -------- Buttons / inputs -------- */
+.mx_TextInput,
+.mx_Field,
+.mx_SearchBox,
+.mx_MessageComposer,
+.mx_MessageComposer .mx_BasicMessageComposer_input {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  color: var(--council-text) !important;
+}
+
+/* Primary action buttons */
+.mx_Button,
+.mx_AccessibleButton.mx_AccessibleButton_kind_primary,
+.mx_Dialog_primary,
+.mx_Dialog .mx_Dialog_primary {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  border-radius: 12px !important;
+  color: var(--council-text) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Rainbow shine on buttons */
+.mx_Button::before,
+.mx_AccessibleButton.mx_AccessibleButton_kind_primary::before,
+.mx_Dialog_primary::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: var(--council-rainbow-soft) !important;
+  opacity: 0.55 !important;
+  transform: translateX(-25%) !important;
+  filter: blur(10px) !important;
+  pointer-events: none !important;
+}
+
+.mx_Button:hover,
+.mx_AccessibleButton.mx_AccessibleButton_kind_primary:hover,
+.mx_Dialog_primary:hover {
+  border-color: rgba(255,255,255,0.18) !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.10), 0 0 18px rgba(255, 61, 127, 0.14) !important;
+}
+
+/* Links */
+a,
+.mx_Link,
+.mx_EventTile_body a {
+  color: #67d7ff !important;
+}
+a:hover,
+.mx_Link:hover {
+  text-decoration: underline !important;
+}
+
+/* -------- Message bubbles / selected items -------- */
+.mx_EventTile:hover {
+  background: rgba(255,255,255,0.03) !important;
+}
+
+.mx_ContextualMenu,
+.mx_PopupMenu {
+  background: rgba(12, 15, 24, 0.98) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.55) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.03) !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12) !important;
+  border-radius: 999px !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.18) !important;
+}
+
+/* Optional: small rainbow border on the left panel */
+.mx_LeftPanel {
+  border-right: 1px solid rgba(255,255,255,0.06) !important;
+  box-shadow: inset -2px 0 0 rgba(255,255,255,0.02) !important;
+}
